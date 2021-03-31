@@ -2,8 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const personName = [' Sohel', ' Aziz']
-  const profession = [' Job/Business', ' Business']
+  const personName = [' Sohel', ' Aziz', ' Mazedul']
+  const profession = [' Job/Business', ' Business', ' Business']
   var name = {
     firstName : 'Mynul',
     secondName : 'Atik',
@@ -23,6 +23,7 @@ function App() {
         <Person name=" Atik" profession=" Web Dev"></Person>
         <Person name= {personName[0]} profession={profession[0]}></Person>
         <Person name= {personName[1]} profession={profession[1]}></Person>
+        <Person name= {personName[2]} profession={profession[2]}></Person>
       </header> 
     </div>
   );
