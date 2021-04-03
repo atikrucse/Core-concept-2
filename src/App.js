@@ -56,14 +56,10 @@ function App() {
 
 function Counter(){
 const [count, setCount] = useState(0);
-const counterIncrease = () => {
-  const newState = count + 1;
-  setCount(newState);
-};
   return(
     <div>
       <h1>Count: {count}</h1>
-      <button onClick={counterIncrease}>Click here</button>
+      <button onClick={() => setCount(count + 1)}>Click here</button>
     </div>
   )
 }
