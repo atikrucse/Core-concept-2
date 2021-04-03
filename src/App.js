@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
   const nayoks = ['Razzak', 'Josim', 'Alomgir', 'Salman', 'Shuvo']
@@ -17,6 +18,8 @@ function App() {
   var color = {
     backgroundColor: 'cyan',
     color: 'black',
+    padding: '20px',
+    borderRadius: '10px'
   }
 
   
@@ -28,6 +31,10 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <div style={color}>
+         <Counter> </Counter>
+        </div>
+        
         <ul>
           {
             nayoks.map(nayok => <li>{nayok}</li>)
@@ -46,6 +53,21 @@ function App() {
     </div>
   );
 }
+
+function Counter(){
+const [count, setCount] = useState(0);
+const counterIncrease = () => {
+  const newState = count + 1;
+  setCount(newState);
+};
+  return(
+    <div>
+      <h1>Count: {count}</h1>
+      <button onClick={counterIncrease}>Click here</button>
+    </div>
+  )
+}
+
 function Person(props){
   const personStyle ={
     border: '2px solid red',
